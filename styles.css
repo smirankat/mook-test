@@ -1,0 +1,324 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: "Montserrat Black";
+  src: url("fonts/montserrat-black.eot"); /* IE9 Compat Modes */
+  src: url("fonts/montserrat-black.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("fonts/montserrat-black.otf") format("opentype"),
+    /* Open Type Font */ url("fonts/montserrat-black.svg") format("svg"),
+    /* Legacy iOS */ url("fonts/montserrat-black.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("fonts/montserrat-black.woff") format("woff"),
+    /* Modern Browsers */ url("fonts/montserrat-black.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./fonts/SFProDisplay-Thin.eot");
+  src: local("fonts/SF Pro Display Thin"), local("./fonts/SFProDisplay-Thin"),
+    url("./fonts/SFProDisplay-Thin.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/SFProDisplay-Thin.woff2") format("woff2"),
+    url("./fonts/SFProDisplay-Thin.woff") format("woff"),
+    url("./fonts/SFProDisplay-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("./fonts/SFProDisplay-Regular.eot");
+  src: local("./fonts/SF Pro Display Regular"),
+    local("./fonts/SFProDisplay-Regular"),
+    url("./fonts/SFProDisplay-Regular.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/SFProDisplay-Regular.woff2") format("woff2"),
+    url("./fonts/SFProDisplay-Regular.woff") format("woff"),
+    url("./fonts/SFProDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Test Söhne Buch";
+  src: url("./fonts/TestSöhne-Buch.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Test Söhne Kräftig";
+  src: url("./fonts/TestSöhne-Kräftig.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Test Söhne Dreiviertelfett";
+  src: url("./fonts/TestSöhne-Dreiviertelfett.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+img {
+  display: block;
+}
+input,
+button {
+  border: none;
+  outline: none;
+  font: inherit;
+}
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 375px;
+  height: 1095px;
+  background: transparent linear-gradient(180deg, #6600ff 0%, #00cc99 100%) 0%
+    0% no-repeat padding-box;
+  opacity: 1;
+}
+header {
+  background: #fceff9;
+  border-radius: 0px 0px 50px 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+h1 {
+  font-family: "Montserrat Black";
+  font: normal normal 900 35px/43px;
+  letter-spacing: 0px;
+  color: #080708;
+}
+.myBtn {
+  font-family: "Test Söhne Kräftig";
+  font: normal normal normal 19px/25px;
+  letter-spacing: 0px;
+  color: #6600ff;
+  width: 98px;
+  height: 36px;
+  background: transparent #fceff9 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 10px #6600ff66;
+  border: 2px solid #6600ff;
+  border-radius: 50px;
+  margin: 22px 0;
+  cursor: pointer;
+}
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 375px;
+  height: 812px;
+  background: rgba(320, 231, 237, 0.2);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+}
+.modal-content {
+  position: absolute;
+  top: 294px;
+  left: 62px;
+}
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.close {
+  position: absolute;
+  top: 22px;
+  left: 277px;
+  font-size: 80px;
+  color: #fc440f;
+  cursor: pointer;
+}
+.close:hover {
+  opacity: 0.5;
+}
+input[type="email"],
+input[type="password"] {
+  width: 251px;
+  height: 55px;
+  background: #fceff9;
+  box-shadow: 0px 0px 20px #08070880;
+  border: 2px solid #080708;
+  border-radius: 30px;
+  font: normal normal normal 25px/33px Test Söhne Buch;
+  color: #080708;
+  padding-left: 20px;
+}
+input[type="button"] {
+  width: 169px;
+  height: 55px;
+  background: #00cc99 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 20px #08070880;
+  border-radius: 30px;
+  font: normal normal normal 25px/33px Test Söhne Dreiviertelfett;
+  color: #fff7fc;
+}
+section {
+  margin: 43px auto 40px;
+  padding: 14px 13.5px;
+  width: 308px;
+  height: 368px;
+  background: transparent
+    linear-gradient(140deg, #fff7fc66 0%, #ffffff66 0%, #ffffff00 100%) 0% 0%
+    no-repeat padding-box;
+  box-shadow: inset 3px 3px 6px #eee5e9;
+  border-radius: 30px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+video {
+  width: 281px;
+  height: 281px;
+  border-radius: 20px;
+}
+section p {
+  font: normal normal 900 35px/43px Montserrat;
+  letter-spacing: 0px;
+  color: #fceff9;
+  margin-top: 5px;
+}
+footer {
+  height: 153px;
+  background: #fceff9 0% 0% no-repeat padding-box;
+  opacity: 1;
+  border-radius: 50px 50px 0px 0px;
+}
+footer p:first-child {
+  font: normal normal normal 20px/24px SF Pro Display;
+  letter-spacing: 0px;
+  color: #080708;
+  width: 278px;
+  padding: 31px 0 20px;
+  margin: 0 auto;
+}
+footer p:last-child {
+  font: normal normal 100 20px/24px SF Pro Display;
+  width: 256px;
+  margin: 0 auto;
+}
+
+/* upload */
+.upload {
+  margin: 0 auto;
+  padding: 52px 30px 0;
+  width: 375px;
+  height: 815px;
+  background: transparent url("img/gradient.webp") 0% 0% no-repeat padding-box;
+}
+.arrow {
+  top: 65px;
+  left: 55px;
+  width: 30px;
+  height: 30px;
+}
+.go-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 184px;
+  height: 55px;
+  border-radius: 30px;
+  background: #fceff9 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 20px #08070880;
+  font: normal normal normal 30px/55px Test Söhne Dreiviertelfett;
+  letter-spacing: 0px;
+  color: #080708;
+  margin: 0 0 50px 4px;
+}
+.video {
+  width: 315px;
+  height: 315px;
+  background: #eee5e900;
+  box-shadow: inset 3px 3px 6px #eee5e9;
+  border: 3px solid #eee5e9;
+  border-radius: 20px;
+}
+.video video {
+  width: 309px;
+  height: 309px;
+}
+.photo {
+  display: flex;
+  justify-content: space-around;
+  gap: 22px;
+  margin-top: 40px;
+}
+.pics {
+  width: 143px;
+  height: 143px;
+  background: transparent
+    linear-gradient(135deg, #fff7fc66 0%, #ffffff66 0%, #ffffff00 100%) 0% 0%
+    no-repeat padding-box;
+  box-shadow: inset 3px 3px 6px #eee5e9;
+  border-radius: 20px;
+  opacity: 1;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.icon {
+  width: 77px;
+  margin: 5px auto;
+}
+.pics p {
+  text-align: center;
+  font: normal normal normal 15px/20px Test Söhne Dreiviertelfett;
+  letter-spacing: 0px;
+  color: #fceff9;
+}
+
+/* result */
+.result {
+  margin: 0 auto;
+  padding: 49px 0;
+  width: 375px;
+  height: 815px;
+  background: transparent url("img/gradient.webp") 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.result__image {
+  margin: 0 auto;
+  width: 244px;
+  height: 529px;
+  background: transparent url("img/Untitled-1.png") 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 10px #5fbb9780;
+  border-radius: 50px;
+}
+.result__save {
+  width: 244px;
+  height: 65px;
+  background: #00cc99 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 20px #080f0fbf;
+  border-radius: 50px;
+  text-align: center;
+  font: normal normal normal 27px/36px Test Söhne Dreiviertelfett;
+  letter-spacing: 0px;
+  color: #fff7fc;
+}
+.result__more-pics {
+  width: 190px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fceff9 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 20px #080f0f80;
+  border-radius: 50px;
+  text-align: center;
+  font: normal normal normal 27px/36px Test Söhne Buch;
+  letter-spacing: 0px;
+  color: #080708;
+}
